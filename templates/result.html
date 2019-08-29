@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Genderify</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Robotodisplay=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Genderify <img src="{{url_for('static',filename='images/gender.png')}}"></h1> 
+            <form>
+                <div id="form-div">
+                    <label class="form-group">
+                        {% if prediction==1 %}
+                        <h2><img src="{{url_for('static',filename='images/masculine.png')}}"> This is most likely a Male Name! </h2>
+                        {% elif prediction==0 %}
+                        <h2><img src="{{url_for('static', filename='images/female.png')}}"> This is most likely a Female Name!</h2>
+                        {% endif %}
+                        <span class="border"></span>
+                    </label>
+                </div>
+            </form>
+    </body>
+</html>
