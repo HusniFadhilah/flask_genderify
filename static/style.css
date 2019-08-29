@@ -3,6 +3,17 @@ body{
   background: linear-gradient(to right, rgb(19, 0, 255), rgb(255, 0, 134));
 }
 
+h4{
+	text-align:center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.center{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
 h1{
   text-align:center;
   font-family: 'Roboto', sans-serif;
@@ -93,9 +104,8 @@ textarea {
     resize:vertical;
 }
 
-input:hover, textarea:hover,
-input:focus, textarea:focus {
-	background-color:white;
+ textarea:focus {
+	background:linear-gradient(to right, rgb(19, 0, 255), rgb(255, 0, 134));
 }
 
 #button-blue{
@@ -128,12 +138,8 @@ input:focus, textarea:focus {
 .ease {
 	width: 0px;
 	height: 74px;
-	background-color: #fbfbfb;
-	-webkit-transition: .5s ease;
-	-moz-transition: .5s ease;
-	-o-transition: .5s ease;
-	-ms-transition: .5s ease;
-	transition: .5s ease;
+	background:linear-gradient(to right, rgb(19, 0, 255), rgb(255, 0, 134));
+	
 }
 
 .submit:hover .ease{
