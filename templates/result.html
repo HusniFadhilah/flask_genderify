@@ -10,9 +10,9 @@
                 <div id="form-div">
                     <label class="form-group">
                         {% if prediction==1 %}
-                        <h2><img src="{{url_for('static',filename='images/masculine.png')}}"> This is most likely a Male Name! </h2>
+                        <h2><img src="{{url_for('static',filename='images/masculine.png')}}"> {{name}} is most likely a Male Name! </h2>
                         {% elif prediction==0 %}
-                        <h2><img src="{{url_for('static', filename='images/female.png')}}"> This is most likely a Female Name!</h2>
+                        <h2><img src="{{url_for('static', filename='images/female.png')}}"> {{name}} is most likely a Female Name!</h2>
                         {% endif %}
                         <span class="border"></span>
                         <br>
