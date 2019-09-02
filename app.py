@@ -2,8 +2,12 @@ from flask import Flask, render_template, url_for, request
 import pandas as pd
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
+import os
 
 app=Flask(__name__)
+
+port = int(os.environ.get('PORT', 5000))
+
 
 @app.route('/')
 def index():
@@ -30,4 +34,4 @@ def predict():
         my_prediction = classifier.predict(vect)
         return render_template('result.html',prediction = my_prediction, name=nm)   
 if __name__=='__main__':
-    app.run(debug=True)
+   app.run(host='0.0.0.0', port=port, debug=True)
