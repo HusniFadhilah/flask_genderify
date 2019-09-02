@@ -3,12 +3,10 @@
         <title>Genderify</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Robotodisplay=swap" rel="stylesheet">
-        <script type="text/javascript" src="{{ url_for('static', filename='particles.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     </head>
     <body>
-        <div id="particles-js"></div> 
-        <h1>Genderify <img src="{{url_for('static',filename='images/gender.png')}}"></h1>
+        <h1 class="animated jello slow">Genderify <img src="{{url_for('static',filename='images/gender.png')}}"></h1>
         <div id="form-div">
             <form class="form" id="form1" method="POST" action="{{url_for('predict')}}">     
                 <p class="name">
@@ -20,7 +18,7 @@
                 </div>
                 <br>
                 <h4>F1 Score: 0.87 | Made with passion by Mayank</h4> <a href="https://github.com/Mak1082/Genderify"><img class="center" src="{{url_for('static',filename='images/github-logo.png')}}"></a>
-            </form>
-        </div> 
+            </form> 
+        </div>
     </body>
 </html>
