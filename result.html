@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Genderify</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Robotodisplay=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    </head>
+    <body>
+        <h1 class="animated jello slow">Genderify <img src="{{url_for('static',filename='images/gender.png')}}"></h1> 
+            <form>
+                <div id="form-div">
+                    <label class="form-group">
+                        {% if prediction==1 %}
+                        <h2><img src="{{url_for('static',filename='images/masculine.png')}}">{{name}} is most likely a Male Name! </h2>
+                        {% elif prediction==0 %}
+                        <h2><img src="{{url_for('static', filename='images/female.png')}}"> {{name}} is most likely a Female Name!</h2>
+                        {% endif %}
+                        <span class="border"></span>
+                        <br>
+                        <h4>F1 Score: 0.87 | Made with passion by Mayank</h4> <a href="https://github.com/Mak1082/Genderify"><img class="center" src="{{url_for('static',  filename='images/github-logo.png')}}"></a>
+                    </label>
+                </div>
+                
+            </form>
+    </body>
+</html>
