@@ -32,9 +32,10 @@ loaded_model = pickle.load(open(filename, 'rb'))
 result = loaded_model.score(X_test, Y_test)
 print(classification_report(Y_test, loaded_model.predict(X_test), digits=4))
 
+
 """#Making the predictions
 Y_pred = classifier.predict(X_test)
-data=['Barry']
+data=['Shubhendu']
 vect=cv.transform(data)
 p=classifier.predict(vect)
 print(p)
