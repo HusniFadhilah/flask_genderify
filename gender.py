@@ -14,6 +14,8 @@ Y=df_data['Gender']
 #Applying CountVectorizer
 cv = CountVectorizer()
 X1 = cv.fit_transform(X)
+pickle.dump(cv, open("vector.pickel", "wb"))
+pickle.dump(cv, open("vector.pickel", "wb"))
 
 #Splitting the dataset into training set and test set
 from sklearn.model_selection import train_test_split
@@ -32,10 +34,9 @@ loaded_model = pickle.load(open(filename, 'rb'))
 result = loaded_model.score(X_test, Y_test)
 print(classification_report(Y_test, loaded_model.predict(X_test), digits=4))
 
-
 """#Making the predictions
 Y_pred = classifier.predict(X_test)
-data=['Shubhendu']
+data=['Barry']
 vect=cv.transform(data)
 p=classifier.predict(vect)
 print(p)
